@@ -1,0 +1,131 @@
+****** NPM ******************
+--Actualizar NPM
+npm install -g npm@latest
+
+--Borrar cache
+npm cache clean --force
+
+--Instalar sin importar version dependencias
+npm i --legacy-peer-deps
+
+--Compilar para produccion
+npm run build
+
+--Cuando no este en la base principal (package.json)
+"build" : "vite build --base=./"
+
+--Instalar libreria para manejo var de entorno
+npm install env-cmd
+
+
+
+****** COMPOSER ******************
+--Intalacion generador de migration
+composer require --dev "kitloong/laravel-migrations-generator"
+
+--Instalar laravel
+composer global require laravel/installer
+
+--Installar librerias de proyecto existente
+composer install
+
+--Mostrar lista de URL de servicios
+php artisan route:list
+
+--Desplegar proyecto
+php artisan serve
+
+--Migracion de la BD ejecucion
+php artisan migrate
+php artisan migrate:install
+
+--Generar migracion de la BD
+php artisan migrate:generate
+
+--Status de las migraciones
+php artisan migrate:status
+/opt/cloudlinux/alt-php83/root/usr/bin/php artisan migrate:status
+
+--Crear archivo de migracion nueva tabla
+php artisan make:migration create_paises_table --create=paises
+
+--Agregar columna saldo a tabla payments
+php artisan make:migration add_saldo_to_payments_table --table=payments
+
+--Crear un seeder de BD
+php artisan make:seeder UsersSeeder
+
+--Ejecutar Seeder
+php artisan db:seed
+
+--Volver a generar toda la BD con los Seed
+php artisan migrate:fresh --seed
+
+--Tinker
+php artisan tinker
+
+--Crear un factory
+php artisan make::factory CommentFactory
+
+--Crear proyecto laravel
+laravel new
+
+--Crear un modelo (-m = crear migrate)
+php artisan make::model Task -m
+
+--Crear controlador
+php artisan make::controller DashboardController
+
+--Crear componente volt
+php artisan make:volt brand
+
+--Crear comandos consola
+php artisan make::command DeleteTaskPending
+
+--Correr schedule local
+php artisan schedule::work
+
+--Para subir a hosting
+php artisan config:clear
+php artisan optimize:clear
+php artisan livewire:publish --config
+npm run buid
+
+--Ejecutar worked de cola trabajo
+php artisan queue:work
+
+--Crear Job
+php artisan make:job RemoveAllTasks
+
+--Instalar laravel breeze
+composer require laravel/breeze --dev
+
+--Instalar en el proyecto el paq. brezze
+php artisan breeze:install
+
+--Actualizar Laravel CLI
+composer global update laravel/installer
+
+--Crear componente livewire
+php artisan make:livewire counter
+
+--Crea resources/views/components/layouts/app.blade.php
+php artisan livewire:layout
+
+--Crear archivo config livewire
+php artisan livewire:publish --config
+
+--Lanzar el cron de Laravel
+php artisan schedule:run
+
+--Mostrar las sql que se ejecutaram
+php artisan migrate --pretend
+
+--Revertir ultimo lote (o tambien varios lote, lote especifico)
+php artisan migrate:rollback
+php artisan migrate:rollback --step=5
+php artisan migrate:rollback --batch=3
+
+--Mostrar SQL
+php artisan migrate:rollback --pretend
+

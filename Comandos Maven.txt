@@ -1,0 +1,25 @@
+--Crear proyecto maven
+mvn archetype:generate
+
+--Compilar
+mvn compile
+
+--Ejecutar pruebas
+mvn test
+
+--Empaquetar el proyecto
+mvn package
+
+--Limpiar el proyecto
+mvn clean
+
+--Instalar en repositorio local
+mvn install
+
+--Actualizar dependencias
+mvn dependency:resolve
+
+--Version
+mvn -v
+
+--

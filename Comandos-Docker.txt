@@ -1,0 +1,62 @@
+--COMANDOS DOCKER
+-version
+docker --version
+
+-Descargar imagen mas nueva de HTTPD
+docker pull httpd
+
+-Listar imagenes
+docker images
+
+-Ejecute la imagen docker mencionada en el comando
+docker run -it -d httpd
+
+-Que se esta ejecutando
+docker ps
+docker ps -a
+
+-Accede al contenedor docker y ejecuta comandos dentro del contenedor.
+docker exec -it 09ca6feb6efc bash
+>ls
+
+-Eliminar contenedor
+docker rm 9b6343d3b5a0
+
+-Eliminar imagen
+docker rmi fce289e99eb9
+
+-Reiniciar contenedor
+docker restart 09ca6feb6efc
+
+-Deteniendo docker
+docker stop 09ca6feb6efc
+docker kill 09ca6feb6efc
+
+-Iniciando docker
+docker start 09ca6feb6efc
+
+-Informacion docker
+docker info
+
+-Copiar de contenedor a local
+sudo docker cp 09ca6feb6efc:/usr/local/apache2/logs/httpd.pid /home/geekflare/
+
+-Mostrar logs
+docker logs 09ca6feb6efc
+
+-Buscar imagen
+docker search hadoop
+
+-Crear volumen
+docker volume create
+docker volume ls
+
+--Crear imagen
+docker build -t kafkatest .
+
+-Descargar MySQL
+--docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag
+docker run --name mysql-server -p 3306:3306 -e MYSQL_ROOT_PASSWORD=admin -d mysql
+docker ps
+docker start mysql-server
+

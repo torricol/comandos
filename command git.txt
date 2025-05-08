@@ -1,0 +1,275 @@
+#configuraciones iniciales para GIT
+git config --system
+git config --global
+git config
+
+# para global
+git config --global user.name "xxx"
+git config --global user.email "xxxxx"
+git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
+git config --global color.ui true
+
+git config user.name "xxx"
+git config user.email "xxxxx"
+git config core.editor "nano -wl1"
+git config color.ui true
+
+# para iniciar git en nuestro proyecto
+git init
+
+# para add todo el directorio actual a nuestro repositorio
+git add .
+
+# para committear nuestros archivos del staged index
+git commit -m "Initial commit"
+
+# para sacarlo del staged index, es decir sacarlo del staged area
+For example, let’s
+say you’ve changed two files and want to commit them as two separate changes, but
+you accidentally type git add * and stage them both. How can you unstage one of the
+two?
+$ git add .
+$ git status
+# On branch master
+# Changes to be committed:
+# (use "git reset HEAD <file>..." to unstage)
+#
+# modified: README.txt
+# modified: benchmarks.rb
+#
+
+git reset HEAD file
+
+#verificar SSL
+git config http.sslVerify "false"
+
+
+
+
+# para agregar un servidor remote
+git remote add origin https://gitlab.com/luismi2505/famenacre.git
+
+
+
+# para remover un servidor remote
+git remote rm origin <branch>
+
+# para clonar un repositorio
+git clone https://github.com/corestand/corestand-src.git
+git -c http.sslVerify=false clone https://quinterosedw@gitlab.tigo.net.bo/channel/prepay-balance/bo-prepay-balance-query-cbs-adapter.git
+git -c http.sslVerify=false clone https://quinterosedw@gitlab.tigo.net.bo/channel/snc-orchestrator/digital-biller-orchestrator-api.git
+
+git -c http.sslVerify=false clone https://gitlab.tigo.net.bo/channel/prepay-balance/bo-prepay-balance-management-api.git
+git -c http.sslVerify=false clone https://gitlab.tigo.net.bo/channel/prepay-balance/bo-prepay-balance-query-cbs-adapter.git
+git -c http.sslVerify=false clone https://gitlab.tigo.net.bo/channel/prepay-balance/bo-prepay-balance-topup-cbs-adapter.git
+git -c http.sslVerify=false clone https://gitlab.tigo.net.bo/channel/snc-facade/tigo-bssapi-bo-masteraccountrecord-v1-service-api.git
+git -c http.sslVerify=false clone https://gitlab.tigo.net.bo/channel/snc-facade/tigo-bssapi-bo-extendedaccount-v1-service-api.git
+git -c http.sslVerify=false clone https://gitlab.tigo.net.bo/channel/snc-orchestrator/gql-queryorders-orchestrator-api.git
+git -c http.sslVerify=false clone https://gitlab.tigo.net.bo/channel/snc-orchestrator/digital-subscriptiondetailsforordercreation-orchestrator-api.git
+git -c http.sslVerify=false clone https://gitlab.tigo.net.bo/channel/snc-adapter/bo-masteraccountrecord-v2-dbe-adapter-api.git
+git -c http.sslVerify=false clone https://gitlab.tigo.net.bo/channel/snc-orchestrator/bo-product-catalog-mobile-orchestrator.git
+git -c http.sslVerify=false clone https://gitlab.tigo.net.bo/channel/snc-facade/digital-getoffers1ndstep-service-api.git
+git -c http.sslVerify=false clone https://gitlab.tigo.net.bo/channel/snc-orchestrator/digital-getoffers1ndstep-orchestrator-api.git
+git -c http.sslVerify=false clone https://gitlab.tigo.net.bo/channel/snc-adapter/digital-getoffers1ndstep-adapter.git
+git -c http.sslVerify=false clone https://gitlab.tigo.net.bo/channel/snc-facade/dbe-graphql-generic-service-api.git
+git -c http.sslVerify=false clone https://gitlab.tigo.net.bo/channel/snc-facade/msisdnfornomination-service-api.git
+git -c http.sslVerify=false clone https://gitlab.tigo.net.bo/channel/snc-orchestrator/msisdnfornomination-orchestrator-api.git
+git -c http.sslVerify=false clone https://gitlab.tigo.net.bo/channel/snc-adapter/bo-product-catalog-qv-mobile-adapter.git
+git -c http.sslVerify=false clone https://gitlab.tigo.net.bo/channel/snc-adapter/bo-product-catalog-vms-mobile-adapter.git
+git -c http.sslVerify=false clone https://gitlab.tigo.net.bo/channel/snc-facade/dms-pinchange-service-api.git
+
+git -c http.sslVerify=false clone https://gitlab.tigo.net.bo/channel/snc-facade/digital-getoffers2ndstepv1-service-api.git
+git -c http.sslVerify=false clone https://gitlab.tigo.net.bo/channel/snc-orchestrator/digital-getoffers2ndstepv1-orchestrator-api.git
+git -c http.sslVerify=false clone https://gitlab.tigo.net.bo/channel/snc-adapter/snc-smc-fetchSupplementaryProducts-queryavailsupofferings-adapter.git
+git -c http.sslVerify=false clone https://gitlab.tigo.net.bo/channel/snc-adapter/digital-getoffers2ndstepv1-adapter.git
+git -c http.sslVerify=false clone https://gitlab.tigo.net.bo/channel/snc-orchestrator/tigo-bssapi-bo-extendedaccount-v1-orchestrator-api.git
+git -c http.sslVerify=false clone https://gitlab.tigo.net.bo/channel/snc-adapter/snc-inventoryservice-getsimdetail-adapter.git
+
+
+
+
+# para rehacer un comentario
+git commit --amend -m "comentario que reemplazar al ultimo"
+
+# para eliminar el archivo de git pero que se quede en mi disco duro y sea ignorado por git
+git rm --cached archivo.txt
+
+#Deshacer el add
+git reset
+
+# para volver atras borrando todo hasta el punto de retorno usando hard reset
+git reset --hard 5783212
+
+# y para subir al repositorio remote despues de un reset hard
+git push --force origin
+
+# para ignorar los cambios de un archivo que esta en el repositorio
+git update-index --assume-unchanged [FILENAME]
+
+# para ignorar cambios hechos por chmod
+git config core.filemode false
+
+# para que git vuelva a detectar los cambios al archivo
+git update-index --no-assume-unchanged [FILENAME]
+
+#Eliminar branch local
+git branch -D <branchName>
+
+#Eliminar branch remote
+git push origin --delete <branchName>
+
+#delete branch remote locally
+git branch -rd origin/<branchName>
+
+# para crear new branch remote
+git push -u origin <name_branch>
+
+#para crear un branch local a partir de un remote
+git checkout -b < new_branch > origin/< new_branch >
+
+#Unmodifying a Modified File, para revertir los cambios al ultimo commit
+git checkout -- benchmarks.rb
+
+# crear una rama y moverse a esa rama
+git checkout -b develop
+
+# crear sólo una rama
+git branch <nombre-rama>
+
+#para ver los archivos que fueron cambiados en un commit
+git show --pretty="format:" --name-only bd61ad98
+
+#para ver el log y de paso ver los archivos cambiados
+git log --stat
+
+#para ver el log junto con los cambios realizados
+git log -p
+
+#muestra una lista de commit junto con sus checksum
+git log --pretty=oneline
+git log --pretty=format:"%h - %an, %ar : %s"
+git log --pretty=format:"%h %s" --graph
+
+One of the common undos takes place when you commit too early and possibly forget
+to add some files, or you mess up your commit message. If you want to try that commit
+again, you can run commit with the --amend option:
+git commit --amend
+example:
+git commit -m ’initial commit’
+git add forgotten_file
+git commit --amend
+
+
+# para tener lo mismo que el master remote
+git reset --hard origin/master
+
+# para borrar el ultimo commit de github o mi repositorio
+git push -f origin HEAD^:master
+
+# muestra los files cambiados en el commit numero xxxx
+git show --pretty="format:" --name-only bd61ad98
+
+#Crear Stash con nombre
+git stash save "mensaje descriptivo"
+
+# git stash
+git stash apply stash@{0} (assuming your saved stash index is 0) when you want your saved(stashed) changes to reflect on your current branch)
+
+# drop stash X
+git stash drop stash@{0} (assuming your saved stash index is 0 and you wanna delete it) 
+
+# show list stash
+git stash list
+
+#show changes
+git stash show -p stash@{0}
+
+# muestra los archivos cambiados
+git show stash@{0}
+
+.git/config remote corestand
+[core]
+        repositoryformatversion = 0
+        filemode = false
+        bare = false
+        logallrefupdates = true
+[remote "origin"]
+        fetch = +refs/heads/*:refs/remotes/origin/*
+        url = git@github.com:corestand/corestand-src.git
+[branch "master"]
+        remote = origin
+        merge = refs/heads/master
+[branch "video_tutorials"]
+        remote = origin
+        merge = refs/heads/video_tutorials
+[branch "kennithwork"]
+        remote = origin
+        merge = refs/heads/kennithwork
+		
+#Crear un tag
+git tag -a v5.1 -m "Texto de creacion de tag"
+
+#Mostra datos de tag
+git show v5.1
+
+#Eliminar el tag local
+git tag --delete nombreDeltag
+
+#Eliminar el tag remoto
+git push --delete origin nombreDeltag
+
+
+##############################################
+# Cambiar el nombre de una rama
+git branch -m $nombre_rama_anterior $nombre_rama_nuevo
+
+# Deshacer el último commit (sin haber hecho push)
+git reset --soft HEAD~1
+ 
+# Deshacer el último commit (habiendo hecho ya un push)
+git revert HEAD
+
+
+#Listar branch
+git branch
+git branch -r
+git branch -a
+
+#Renombrar rama local/remota
+git branch -m old-name new-name
+git push origin :old-name
+git push origin new-name
+
+#Revertir el merge
+git reset --hard origin/current-branch
+
+# Configurar tracking rama local a rama remota
+git branch --set-upstream-to=origin/myNewBranch myNewBranch
+
+# Crear Alias
+git config --global alias.st status
+"git st" ejemplo uso
+
+#Alias con multiples comandos
+git config --global alias.sp "!git status && git pull"
+
+#Ver y editar alias
+git config --global --get-regexp alias
+
+#Mostrar URL de repositorio remoto
+git remote -v
+
+#Añadir repositorio remoto
+git remote add origin https://gitlab.com/luismi2505/tg_batch-termination.git
+git remote add gitlab https://gitlab.com/luismi2505/tg_batch-termination.git
+git remote add gitlab https://gitlab.com/luismi2505/famenacre.git
+
+
+#Tigo lab
+git remote add gitlab https://gitlab.tigo.net.bo/channel/snc-adapter/batch-termination.git
+
+git branch -M master
+git push -uf origin master
+
+#Directorio seguro
+git config --global --add safe.directory E:/LMTF/PERSONAL/MME
